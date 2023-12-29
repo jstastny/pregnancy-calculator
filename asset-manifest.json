@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/pregnancy-calculator/static/css/main.a3429531.css",
-    "main.js": "/pregnancy-calculator/static/js/main.d2f09a68.js",
+    "main.css": "/pregnancy-calculator/static/css/main.e1c04b51.css",
+    "main.js": "/pregnancy-calculator/static/js/main.7ec25272.js",
     "static/js/787.9b7771b9.chunk.js": "/pregnancy-calculator/static/js/787.9b7771b9.chunk.js",
+    "static/media/baby.svg": "/pregnancy-calculator/static/media/baby.0597352dc9db5578189b71559d537843.svg",
     "index.html": "/pregnancy-calculator/index.html",
-    "main.a3429531.css.map": "/pregnancy-calculator/static/css/main.a3429531.css.map",
-    "main.d2f09a68.js.map": "/pregnancy-calculator/static/js/main.d2f09a68.js.map",
+    "main.e1c04b51.css.map": "/pregnancy-calculator/static/css/main.e1c04b51.css.map",
+    "main.7ec25272.js.map": "/pregnancy-calculator/static/js/main.7ec25272.js.map",
     "787.9b7771b9.chunk.js.map": "/pregnancy-calculator/static/js/787.9b7771b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3429531.css",
-    "static/js/main.d2f09a68.js"
+    "static/css/main.e1c04b51.css",
+    "static/js/main.7ec25272.js"
   ]
 }
