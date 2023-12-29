@@ -12,7 +12,7 @@ function App() {
   const calculateConceptionDate = () => {
     if (selectedDate) {
       const conceptionDate = moment(selectedDate).subtract(38, "weeks");
-      return conceptionDate.toDate().toLocaleDateString(); // Convert moment date to JS Date and then format based on locale
+      return conceptionDate.toDate().toLocaleDateString("cs-CZ"); // Convert moment date to JS Date and then format based on locale
     }
     return "";
   };
