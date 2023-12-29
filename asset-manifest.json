@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pregnancy-calculator/static/css/main.443f98c4.css",
+    "main.js": "/pregnancy-calculator/static/js/main.4c2a6e97.js",
+    "static/js/787.9b7771b9.chunk.js": "/pregnancy-calculator/static/js/787.9b7771b9.chunk.js",
+    "index.html": "/pregnancy-calculator/index.html",
+    "main.443f98c4.css.map": "/pregnancy-calculator/static/css/main.443f98c4.css.map",
+    "main.4c2a6e97.js.map": "/pregnancy-calculator/static/js/main.4c2a6e97.js.map",
+    "787.9b7771b9.chunk.js.map": "/pregnancy-calculator/static/js/787.9b7771b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.443f98c4.css",
+    "static/js/main.4c2a6e97.js"
+  ]
+}
