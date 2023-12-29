@@ -1,54 +1,52 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import moment from 'moment';
-import { useMediaQuery } from 'react-responsive';
+import React, { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
+import moment from "moment";
 
 function App() {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const [selectedDate, setSelectedDate] = useState("");
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
   };
 
   const calculateConceptionDate = () => {
     if (selectedDate) {
-      return moment(selectedDate).subtract(38, 'weeks').format('MMMM Do YYYY');
+      const conceptionDate = moment(selectedDate).subtract(38, "weeks");
+      return conceptionDate.toDate().toLocaleDateString(); // Convert moment date to JS Date and then format based on locale
     }
-    return '';
+    return "";
   };
-  
 
   const calculateWeekAndDay = () => {
     if (selectedDate) {
       const today = moment();
-      const pregnancyDuration = today.diff(selectedDate, 'weeks');
-      const remainingDays = today.subtract(pregnancyDuration, 'weeks').diff(selectedDate, 'days');
-      return `Week ${pregnancyDuration} Day ${remainingDays}`;
+      console.log({"Selected date: ": moment(selectedDate)})
+      const conceptionDate = moment(selectedDate).subtract(40, "weeks");
+      const pregnancyDurationDays = today.diff(conceptionDate, "days");
+      const weeks = Math.floor(pregnancyDurationDays / 7);
+      const days = pregnancyDurationDays % 7;
+
+      return `${weeks}+${days}`;
     }
-    return '';
+    return "";
   };
 
   return (
     <div className="bg-custom-gray min-h-screen flex flex-col justify-center items-center font-sans">
-      <h1 className="text-3xl mb-8 text-custom-blue">Pregnancy Calculator</h1>
-      <DatePicker
+      <h1 className="text-3xl mb-8 text-custom-blue">Kalkulačka početí</h1>
+      <input
+        type="date"
         className="p-3 border rounded-md mb-6 text-center"
-        selected={selectedDate}
+        value={selectedDate}
         onChange={handleDateChange}
-        dateFormat="MMMM d, yyyy"
-        placeholderText="Select child's birth date"
+        placeholder="Předpokládaný termín porodu"
       />
-      <div className="mb-6">
-        <h2 className="text-2xl mb-2 text-custom-blue">Conception Date:</h2>
-        <p className="text-xl">{calculateConceptionDate()}</p>
-      </div>
-      <div>
-        <h2 className="text-2xl mb-2 text-custom-blue">Current Week and Day of Pregnancy:</h2>
-        <p className="text-xl">{calculateWeekAndDay()}</p>
-      </div>
-      {isMobile && <p className="mt-6 text-red-500">You're on a mobile device!</p>}
+        <h2 className="text-2xl mb-2 text-custom-blue">Datum početí</h2>
+        <p className="text-2xl mb-2 text-custom-blue">{calculateConceptionDate()}</p>
+      
+        <h2 className="text-2xl mb-2 text-custom-blue">Týden těhotenství</h2>
+        <p className="text-2xl mb-2 text-custom-blue">{calculateWeekAndDay()}</p>
+      
     </div>
   );
 }
