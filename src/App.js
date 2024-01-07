@@ -133,7 +133,7 @@ function App() {
         onChange={handleCrlChange}
         min="3"
         max="84"
-        placeholder="Délka plodu cm"
+        placeholder="Délka plodu mm"
       />
       <p className="text-base mb-0">Týden těhotenství</p>
       <p className="text-2xl mb-0 font-bold">{calculateWeekAndDayCrl()}</p>
