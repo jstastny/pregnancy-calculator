@@ -58,11 +58,12 @@ export function lengthToDays(lengthInMM) {
       { length: 82, duration: "14+0" },
     ];
 
-    var matchingRow = lengthTable.find((row) => row.length == lengthInMM);
+    var matchingRow = lengthTable.find((row) => row.length === lengthInMM);
     for (let i = 0; i < 5; i++) {
       if (!matchingRow) {
         lengthInMM = lengthInMM - 1;
-        matchingRow = lengthTable.find((row) => row.length == lengthInMM);
+        // eslint-disable-next-line no-loop-func
+        matchingRow = lengthTable.find((row) => row.length === lengthInMM);
       } else {
         break;
       }
