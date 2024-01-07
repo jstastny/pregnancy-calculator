@@ -71,8 +71,7 @@ export function lengthToDays(lengthInMM) {
 
     if (matchingRow) {
       const [weeks, days] = matchingRow.duration.split("+").map((x) => parseInt(x));
-      const totalDays = weeks * 7 + days;
-      return totalDays;
+      return weeks * 7 + days;
     } else {
     //   console.error("Length not found in the table");
       return null;
