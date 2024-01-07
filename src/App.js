@@ -50,11 +50,12 @@ function App() {
     return "-";
   };
 
-  
   const calculateConceptionDateCrl = () => {
     if (selectedDateCrl && crlValue) {
       const daysCrl = lengthToDays(crlValue);
-      const birdthDate = moment(selectedDateCrl).subtract(daysCrl, "days").add(40, "weeks");
+      const birdthDate = moment(selectedDateCrl)
+        .subtract(daysCrl, "days")
+        .add(40, "weeks");
       return birdthDate.toDate().toLocaleDateString("cs-CZ");
     }
     return "-";
@@ -64,7 +65,7 @@ function App() {
     if (selectedDateCrl && crlValue) {
       const daysCrl = lengthToDays(crlValue);
       const conceptionDate = moment(selectedDateCrl).subtract(daysCrl, "days");
-      const today = moment()
+      const today = moment();
       const pregnancyDurationDays = today.diff(conceptionDate, "days");
       const weeks = Math.floor(pregnancyDurationDays / 7);
       const days = pregnancyDurationDays % 7;
@@ -75,8 +76,10 @@ function App() {
 
   const calculateConceptionDateEt = () => {
     if (selectedDateEt && etValue) {
-      const daysEt = etValue - 2 + 15;  
-      const birdthDate = moment(selectedDateEt).subtract(daysEt, "days").add(40, "weeks");
+      const daysEt = etValue - 2 + 15;
+      const birdthDate = moment(selectedDateEt)
+        .subtract(daysEt, "days")
+        .add(40, "weeks");
       return birdthDate.toDate().toLocaleDateString("cs-CZ");
     }
     return "-";
@@ -84,18 +87,16 @@ function App() {
 
   const calculateWeekAndDayEt = () => {
     if (selectedDateEt && etValue) {
-      const daysEt = etValue - 2 + 15;  
+      const daysEt = etValue - 2 + 15;
       const conceptionDate = moment(selectedDateEt).subtract(daysEt, "days");
-      const today = moment()
+      const today = moment();
       const pregnancyDurationDays = today.diff(conceptionDate, "days");
       const weeks = Math.floor(pregnancyDurationDays / 7);
       const days = pregnancyDurationDays % 7;
       return `${weeks} + ${days}`;
-    }        
+    }
     return "-";
   };
-
-
 
   return (
     <div className="bg-custom-gray min-h-screen flex flex-col items-center font-sans">
@@ -163,7 +164,6 @@ function App() {
       <p className="text-2xl mb-0 font-bold">{calculateWeekAndDayEt()}</p>
       <p className="text-base mb-0 ">Datum porodu</p>
       <p className="text-base mb-0 font-bold">{calculateConceptionDateEt()}</p>
-
     </div>
   );
 }
