@@ -52,7 +52,7 @@ function App() {
 
   const calculateConceptionDateCrl = () => {
     if (selectedDateCrl && crlValue) {
-      const daysCrl = lengthToDays(crlValue);
+      const daysCrl = lengthToDays(parseInt(crlValue));
       const birdthDate = moment(selectedDateCrl)
         .subtract(daysCrl, "days")
         .add(40, "weeks");
