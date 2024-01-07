@@ -74,7 +74,7 @@ function App() {
   };
 
   const calculateConceptionDateEt = () => {
-    if (selectedDateCrl && crlValue) {
+    if (selectedDateEt && etValue) {
       const daysEt = etValue - 2 + 15;  
       const birdthDate = moment(selectedDateEt).subtract(daysEt, "days").add(40, "weeks");
       return birdthDate.toDate().toLocaleDateString("cs-CZ");

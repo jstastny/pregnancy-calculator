@@ -59,20 +59,13 @@ export function lengthToDays(lengthInMM) {
     ];
 
     var matchingRow = lengthTable.find((row) => row.length === lengthInMM);
-    for (let i = 0; i < 5; i++) {
-      if (!matchingRow) {
-        lengthInMM = lengthInMM - 1;
-        // eslint-disable-next-line no-loop-func
-        matchingRow = lengthTable.find((row) => row.length === lengthInMM);
-      } else {
-        break;
-      }
+    for (let i = 0; !matchingRow && i < 5; i++) {
+      matchingRow = lengthTable.find((row) => row.length === lengthInMM - i - 1);
     }
 
     if (matchingRow) {
-      const [weeks, days] = matchingRow.duration.split("+");
-      const totalDays = parseInt(weeks) * 7 + parseInt(days);
-      return totalDays;
+      const [weeks, days] = matchingRow.duration.split("+").map((x) => parseInt(x));
+      return weeks * 7 + days;
     } else {
     //   console.error("Length not found in the table");
       return null;
