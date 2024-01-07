@@ -70,8 +70,8 @@ export function lengthToDays(lengthInMM) {
     }
 
     if (matchingRow) {
-      const [weeks, days] = matchingRow.duration.split("+");
-      const totalDays = parseInt(weeks) * 7 + parseInt(days);
+      const [weeks, days] = matchingRow.duration.split("+").map((x) => parseInt(x));
+      const totalDays = weeks * 7 + days;
       return totalDays;
     } else {
     //   console.error("Length not found in the table");
