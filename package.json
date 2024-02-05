@@ -10,7 +10,7 @@
     "autoprefixer": "^10.4.17",
     "moment": "^2.30.1",
     "postcss": "^8.4.32",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-datepicker": "^5.0.0",
     "react-dom": "^18.2.0",
