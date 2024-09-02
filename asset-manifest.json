@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pregnancy-calculator/static/css/main.ebeb83d6.css",
-    "main.js": "/pregnancy-calculator/static/js/main.69e2c3b0.js",
+    "main.css": "/pregnancy-calculator/static/css/main.888d0f11.css",
+    "main.js": "/pregnancy-calculator/static/js/main.7f1ca4be.js",
     "static/js/496.6ad75da8.chunk.js": "/pregnancy-calculator/static/js/496.6ad75da8.chunk.js",
     "index.html": "/pregnancy-calculator/index.html",
-    "main.ebeb83d6.css.map": "/pregnancy-calculator/static/css/main.ebeb83d6.css.map",
-    "main.69e2c3b0.js.map": "/pregnancy-calculator/static/js/main.69e2c3b0.js.map",
+    "main.888d0f11.css.map": "/pregnancy-calculator/static/css/main.888d0f11.css.map",
+    "main.7f1ca4be.js.map": "/pregnancy-calculator/static/js/main.7f1ca4be.js.map",
     "496.6ad75da8.chunk.js.map": "/pregnancy-calculator/static/js/496.6ad75da8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebeb83d6.css",
-    "static/js/main.69e2c3b0.js"
+    "static/css/main.888d0f11.css",
+    "static/js/main.7f1ca4be.js"
   ]
 }
